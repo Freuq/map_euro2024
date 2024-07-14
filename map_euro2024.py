@@ -1,7 +1,7 @@
 import folium
 import pandas as pd
 import webbrowser
-
+1
 df_euro24 = pd.read_csv("stadiums.csv")
 
 # lat y lng de Alemania, que es donde se realiza la euro
@@ -12,10 +12,6 @@ sf_map = folium.Map(location = [latitude, longitude], zoom_start = 6)
 
 # Inicializamos un FeatureGroup() para la Euro del DataFrame
 euro2024 = folium.map.FeatureGroup()
-
-# Recorre los 100 crímenes y agrega a cada uno al FeatureGroup() de incidentes
-# La columna Y y X son las coordenadas, latitud y longitud respectivamente
-# La columna "Category" es el tipo de incidente.
 
 for lat, lng, label, foto in zip(df_euro24["lat"], df_euro24["long"], df_euro24["label"], df_euro24["foto"]):
 
@@ -37,7 +33,7 @@ for lat, lng, label, foto in zip(df_euro24["lat"], df_euro24["long"], df_euro24[
     euro2024.add_child(folium.Marker(location = [lat, lng],
                                       popup    = popup))
     
-# Agrega incidentes al map
+# Agrega detalles al map
 sf_map.add_child(euro2024)
 
 map_filename = 'map_euro2024.html'
