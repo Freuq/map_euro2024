@@ -99,4 +99,4 @@ df_euro24["foto"] = df_euro24["foto"].apply(lambda x: x.split()[0])
 
 df_euro24
 
-df_euro24.to_csv("stadiums.csv")
+df_euro24.to_csv("stadiums.csv") 
