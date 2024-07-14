@@ -39,4 +39,4 @@ sf_map.add_child(euro2024)
 map_filename = 'map_euro2024.html'
 euro2024.save(map_filename)
 
-webbrowser.open(map_filename) 
+webbrowser.open(map_filename)
